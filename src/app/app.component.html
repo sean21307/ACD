@@ -4,20 +4,32 @@
     <p class="lead">Demonstrating Angular Data Communication with &#64;Input and &#64;Output</p>
   </div>
 
-  <div class="alert alert-info text-center" role="alert">
-    <h2>Latest Job Update: <span class="fw-bold">{{ latestJob || 'None' }}</span></h2>
+  
+   <!-- Demo 1 -->
+  <div class="p-4 my-4 border border-dark rounded" style="border-width: 2px;">
+    <h3 class="text-center mb-4">Demo 1</h3>
+    <div class="alert alert-info text-center" role="alert">
+      <h2>Latest Job Update: <span class="fw-bold">{{ latestJob || 'None' }}</span></h2>
+    </div>
+  
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+
+        <!-- Connects the (jobUpdated) event to AppComponent's updateLatestJob function -->
+        <app-example-component job="Teacher" (jobUpdated)="updateLatestJob($event)"></app-example-component>
+      </div>
+      <div class="col-md-4">
+        <app-example-component job="Firefighter" (jobUpdated)="updateLatestJob($event)" />
+      </div>
+      <div class="col-md-4">
+        <app-example-component job="Accountant" (jobUpdated)="updateLatestJob($event)" />
+      </div>
+    </div>
   </div>
 
-  <div class="row justify-content-center">
-    <div class="col-md-4">
-      <app-example-component job="Teacher" (jobUpdated)="updateLatestJob($event)"></app-example-component>
-    </div>
-    <div class="col-md-4">
-      <app-example-component 
-        job="Firefighter" 
-        (jobUpdated)="updateLatestJob($event)" 
-      />
-      
-    </div>
+  <!-- Demo 2 -->
+  <div class="p-4 my-4 border border-dark rounded" style="border-width: 2px;">
+    <h3 class="text-center mb-4">Demo 2</h3>
+    
   </div>
 </div>
