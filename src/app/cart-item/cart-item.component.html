@@ -1,0 +1,14 @@
+<div class="card mb-3 p-3">
+    <h5>{{ item.name }}</h5>
+    <p>Price: ${{ item.price }}</p>
+    <div class="d-flex align-items-center">
+        <label class="me-2">Quantity:</label>
+
+        <!-- Emits the quantityChange signal whenever the input element changes -->
+        <input type="number" [value]="item.quantity" (input)="onQuantityChange($event)"
+            class="form-control me-3" style="width: 70px;">
+
+        <!-- Emits the remove signal when the Remove button is clicked -->
+        <button (click)="onRemove()" class="btn btn-danger">Remove</button>
+    </div>
+</div>
