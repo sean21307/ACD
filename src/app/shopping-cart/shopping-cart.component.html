@@ -7,10 +7,11 @@
             <!-- Passes in the item from the array to the child CartItem component -->
             <!-- Connects the quantityChange event to ShoppingCart's updateQuantity function -->
             <!-- And connects the remove event to ShoppingCart's removeItem function -->
+
+            <!-- TODO: bind the remove event to the removeItem function, passing in item.id -->
             <app-cart-item
                 [item]="item"
                 (quantityChange)="updateQuantity(item.id, $event)"
-                (remove)="removeItem(item.id)"
             />
         }
         

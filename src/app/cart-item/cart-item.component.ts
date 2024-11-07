@@ -19,10 +19,13 @@ export class CartItemComponent {
   onQuantityChange(event: Event) {
     const inputElement = event.target as HTMLInputElement;
     const newQuantity = Number(inputElement.value);
-    this.quantityChange.emit(newQuantity);
+
+    // TODO: Emit the quantityChange emitter, passing in newQuantity
+    
   }
 
   onRemove() {
-    this.remove.emit();
+    // TODO: emit the remove emitter
+    
   }
 }
